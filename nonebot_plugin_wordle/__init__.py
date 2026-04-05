@@ -168,7 +168,7 @@ async def _(
     games[user_id] = game
     set_timeout(matcher, user_id)
     matcher_word = on_regex(
-        rf"^(?P<word>[a-zA-Z]{{{length.result}}})$",
+        rf"^(?P<word>[a-zA-Z]{{{length.result}}})\s*$",
         rule=same_user(user_id),
         block=True,
         priority=14,
